@@ -1,0 +1,2 @@
+li{list-style:none}.todo{font-size:13px}.todo[data-unit]::after{content:attr(data-unit)}.list li{padding-left:30px;position:relative}.list li::before{content:"";display:block;width:15px;height:1.5px;background:#000;position:absolute;top:45%;left:0}
+/*# sourceMappingURL=style.min.css.map */

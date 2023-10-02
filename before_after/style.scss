@@ -1,0 +1,47 @@
+li{
+    list-style: none;
+}
+
+// 疑似要素について
+
+// 前提として、疑似要素を使う場合はcontentプロパティの記述が必須
+$fz:13px;
+
+.todo{
+    font-size: $fz;
+}
+
+/*.todo::before{
+    content: '私は';
+    contentは文字列を入れることも可能
+    font-size: $fz;
+}
+.todo::after{
+    content: 'をする';
+    font-size: $fz;
+}*/
+
+// data型
+
+.todo[data-unit]::after{
+    content:attr(data-unit);// 疑似要素afterにdata-unitの値を入れる定義
+}
+
+// リスト型
+
+.list li{
+    padding-left: 30px;
+    position: relative;
+}
+
+.list li::before{
+    content: ""; //オブジェクトの場合は空
+    display: block; //横幅、高さ指定の為。デフォルトはinline
+    width: 15px;
+    height: 1.5px;
+    background: #000;
+    position: absolute;
+    top: 45%;
+    left: 0;
+}
+
