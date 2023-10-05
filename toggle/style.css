@@ -1,0 +1,45 @@
+/* toggle */
+
+.sample {
+    cursor: pointer;
+    position: relative;
+}
+
+.process-toggle {
+    display: none;
+}
+
+.sample::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    background-color: #ADADAD;
+    position: absolute;
+    right: 20px;
+    top: 55px;
+    transform: translateY(-50%);
+    transition: transform 0.2s;
+}
+
+.sample::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    background-color: #ADADAD;
+    position: absolute;
+    right: 20px;
+    top: 55px;
+    transform: translateY(-50%) rotate(90deg);
+    transition: transform 0.2s;
+}
+
+.sample.show::before {
+    opacity: 0;
+}
+
+.sample.show::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
