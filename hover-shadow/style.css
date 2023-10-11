@@ -1,0 +1,13 @@
+/* hover時に少し浮かせて影を作る */
+
+.sample{
+    transition: 0.3s;
+}
+
+/* PCにのみ適用 */
+@media screen and (min-width: 769px) {
+    .sample:hover {
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4), 0 0 50px rgba(128, 128, 128, 0.1);
+        transform: translateY(-5px);
+    }
+}
